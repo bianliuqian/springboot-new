@@ -17,7 +17,6 @@ import java.util.List;
 @RequestMapping("page")
 @Slf4j
 public class PageController {
-    //james
     //slf4j+logback
    // private Logger logger = LoggerFactory.getLogger(PageController.class);
 
