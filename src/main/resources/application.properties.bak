@@ -1,0 +1,15 @@
+#设置对输出参数的格式化
+spring.jackson.date-format=yyyy-MM-dd
+
+#北京为东八区使用GMT+8
+spring.jackson.time-zone=GMT+8
+
+#设置对输入参数的格式化，后台可以接受Date类型
+spring.mvc.format.date= yyyy-MM-dd
+
+#对默认的配置需要更改的时候
+#server.port=8888
+
+#配置一些公共的信息
+resource.imageServer = http://image.qf.com
+resource.emailServer = http://email.qf.com

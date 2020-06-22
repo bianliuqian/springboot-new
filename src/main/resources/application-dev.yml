@@ -1,0 +1,7 @@
+
+resource:
+  imageServer: http://devimage.qf.com
+  emailServer: http://devemail.qf.com
+spring:
+  profiles:
+    active: dev

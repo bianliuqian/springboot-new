@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    魔板页面
+    <span th:text="${username}">vio</span>
+    <!--字符串拼接-->
+    <span th:text="vip+${username}">vio</span>
+    <span th:text="|vip,${username}|">vio</span>
+    <!--<img src="#" th:src="${url}">
+    <input type="text" value="" th:value="${value}">-->
+    username:<span th:text="${user.name}"></span>
+
+    <!--条件判断-->
+    <span th:if="${money>5000}">小康</span>
+    <span th:unless="${money>5000}">贫困</span>
+    <hr/>
+
+    <!--数据遍历-->
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>name</td>
+        </tr>
+        <tr th:each="user : ${list}">
+            <td th:text="${user.id}">ID</td>
+            <td th:text="${user.name}">name</td>
+        </tr>
+    </table>
+
+    <input th:value="${#dates.format(now,'yyyy-MM-dd HH:mm:ss')}"/>
+
+</body>
+</html>

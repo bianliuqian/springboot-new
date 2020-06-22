@@ -1,0 +1,24 @@
+server:
+  port: 8080
+resource:
+  imageServer: http://image.qf.com
+  emailServer: http://email.qf.com
+#决定启动哪一个配置文件
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/java1907?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  thymeleaf:
+    cache: false
+  mvc:
+    date-format: yyyy-MM-dd
+
+#[Failed to convert value of type 'java.lang.String[]' to required type 'java.util.Date'
+#配置数据源信息 查看背后执行的sql
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#日志信息 更精细化的配置
